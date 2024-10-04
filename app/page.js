@@ -1,20 +1,21 @@
 import Link from "next/link";
 
 export default function Home() {
-  let linkStyle = "underline text-cyan-600 hover:text-cyan-300;";
+  let linkStyle = "text-white-600 hover:text-green-300 hover:underline py-1";
   return (
-    <main>
-      <h1>CPRG 306: Web Development 2 - Assignments</h1>
-      <ul>
-        <li>
-          <Link href="./week-2" class={linkStyle}>
-            Week 2 Assignment
-          </Link>
+    <main className="bg-black">
+      <h1 className="text-5xl font-bold text-white ml-40 mt-20 mb-10">
+        CPRG 306: Web Development 2 - Assignments
+      </h1>
+      <ul className="ml-40 text-2xl">
+        <li className={linkStyle}>
+          <Link href="./week-2">Week 2 Assignment</Link>
         </li>
-        <li>
-          <Link href="./week-3" class={linkStyle}>
-            Week 3 Assignment
-          </Link>
+        <li className={linkStyle}>
+          <Link href="./week-3">Week 3 Assignment</Link>
+        </li>
+        <li className={linkStyle}>
+          <Link href="./week-4">Week 4 Assignment</Link>
         </li>
       </ul>
     </main>
