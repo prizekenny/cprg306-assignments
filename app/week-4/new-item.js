@@ -11,6 +11,12 @@ export default function NewItem() {
   const decrement = () => {
     if (quantity > 1) setQuantity(quantity - 1);
   };
+  const handleQuantityChange = (e) => {
+    let qty = e.target.value;
+    if (qty <= 1) qty = 1;
+    if (qty >= 20) qty = 20;
+    setQuantity(qty);
+  };
 
   const buttonStyle =
     "bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 w-10 h-8 ml-2 rounded-xl disabled:bg-gray-400";
@@ -21,7 +27,7 @@ export default function NewItem() {
         type="text"
         value={quantity}
         className="p-1 w-20"
-        onChange={(e) => setQuantity(e.target.value)}
+        onChange={handleQuantityChange}
       ></input>
       <button
         onClick={decrement}
