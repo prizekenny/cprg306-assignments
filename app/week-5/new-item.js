@@ -15,7 +15,12 @@ export default function NewItem({ quantity, setQuantity }) {
 
   return (
     <div className="p-2 bg-white text-black">
-      <input type="text" defaultValue={quantity} className="p-1 w-20"></input>
+      <input
+        type="text"
+        value={quantity}
+        className="p-1 w-20"
+        onChange={(e) => setQuantity(e.target.value)}
+      ></input>
       <button
         type="button"
         onClick={decrement}
